@@ -1,3 +1,12 @@
+Common/bin/
+Common/obj/
+LocalDbPlugin/bin/
+LocalDbPlugin/obj/
+Services/bin/
+Services/obj/
+UnitTests/bin/
+UnitTests/obj/
+
 #ignore thumbnails created by windows
 Thumbs.db
 
