@@ -1,0 +1,10 @@
+diff a/Common/Models/Rating.cs b/Common/Models/Rating.cs	(rejected hunks)
+@@ -58,7 +58,7 @@
+ 
+         public override string ToString()
+         {
+-            return $"ID: {base.Id}";
++            return $"ID: {base.Id} Value: {this._value}";
+         }
+     }
+ }

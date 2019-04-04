@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Windows.UserControls.AddDirectorUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Windows.UserControls"
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300"
+             MinWidth="300" MinHeight="300">
+    
+    <Grid Background="White" ZIndex="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Add new Director" Height="23" Margin="10,10,10,0"
+                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" 
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,10,0,0">
+
+            <TextBlock x:Name="NameText" TextWrapping="Wrap" Text="Name"/>
+            <TextBox x:Name="NameBox" Height="23" TextWrapping="Wrap" 
+                     Text="{Binding NewDirector.Name, Mode=TwoWay}"/>
+
+            <TextBlock x:Name="AddressText" TextWrapping="Wrap" Text="Address"/>
+            <TextBox x:Name="AddressBox" Height="23" TextWrapping="Wrap" 
+                     Text="{Binding NewDirector.Address, Mode=TwoWay}"/>
+
+            <TextBlock x:Name="BornText" TextWrapping="Wrap" Text="Born"/>
+            <DatePicker/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,10,10,0">
+            <TextBlock x:Name="PortraitText" TextWrapping="Wrap" Text="Portrait"/>
+            <Image Name="PortraitImage" Stretch="Fill" Source="{Binding NewDirector.PortraitImage, Mode=TwoWay}"/>
+            <Button x:Name="PortraitUploadButton" Content="Load from disk"
+                    Click="AddNewPortraitButton_Click"/>
+        </StackPanel>
+
+        <Button x:Name="CancelButton" Content="Cancel" Width="50" Height="23" Margin="10,0,10,10"
+                VerticalAlignment="Bottom" HorizontalAlignment="left" Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="3" 
+                Command="{Binding CancelNewDirectorCommand}" />
+
+        <Button x:Name="AddButton" Content="Add" Width="100" Height="23" Margin="10,0,10,10"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="3" 
+                Command="{Binding SaveDirectorCommand}" />
+
+    </Grid>
+</UserControl>

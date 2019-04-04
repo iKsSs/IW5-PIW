@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="58289fc1-e903-4543-bc53-1f9dd8709787" name="UseCaseDiagram" linkedPackageId="85fdb31a-933e-4ac0-9e69-852eb744438d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="68dead43-32ae-4f47-89bb-f6b9336a6090">
+      <profileInstance Id="550c6451-0f11-40bb-a436-7b87785bcf73" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b37f0086-b247-47e2-b91e-b5a97bf2836a">
+      <profileInstance Id="a58983e6-7c44-435f-bc64-030d290fa64c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="1082a8a5-3d47-4db8-9041-94fc18696b1c" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d5da78f-b8c5-4821-9c96-10619505ec55" />
+        <targetEnds>
+          <association Id="99833e1c-57e4-46bd-b5c7-cb65f8a27c9a" isDerived="false" sourceEndRoleName="User" targetEndRoleName="List movies" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" LastKnownName="List movies" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8af4b2a2-1210-454b-9037-29cd080e7fa8" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9a65153-f311-47c8-9b18-4dd37d1d9596" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9cdc6fc5-a1df-44e2-96dc-126eb360359a" name="List movies" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="137f4636-d6c0-457b-8415-cabc42ced884" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="67f0c642-585b-465b-bee0-881b1691bc01" />
+          </association>
+          <association Id="a8326464-3cf5-41d1-83e5-58b3c6783a1b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add movie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d35abd1-c8f2-45a1-8941-0f1047d2b4ac" LastKnownName="Add movie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="769ea5de-9fa5-48db-b69a-3f319ff3c38b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4235451a-2da7-4a72-b8ef-2f984b4eb4ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5f30002-29c5-40a9-9d11-10ce3c1045c1" name="Add movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a09f1fe7-9dc3-4325-bfe5-d6ddf649867e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="549b2fb3-9fae-41d3-b677-5de26fa608f8" />
+          </association>
+          <association Id="9e7933af-b14b-4ea1-926b-1ae716cd3f72" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Manage genres" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4ee6c558-0fa4-4fa7-82fc-a4ba65ae6aad" LastKnownName="Manage genres" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8193f303-7499-4248-adfb-5a283ea493fb" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a2d1f505-5068-42ef-b0fb-9854a8105215" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2cc5bbe-c961-4062-8953-f703e4cdab74" name="Manage genres" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="925e702a-77b7-4347-84df-7ebcb518d848" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18db9961-4a31-48bd-b11c-ef86524836bf" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" name="List movies" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3bf4d288-76cc-41ff-8010-85d0c7a0ba92" />
+        <subjects>
+          <subsystemMoniker Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" LastKnownName="Llist of movies" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8d35abd1-c8f2-45a1-8941-0f1047d2b4ac" name="Add movie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c0b12f4-9873-47a0-a728-3ea5f0812fe1" />
+        <subjects>
+          <subsystemMoniker Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" LastKnownName="Llist of movies" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1d724d5e-347f-47c4-bfe5-206ef4b3b1c4" name="Filter list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b505ab86-4d9d-4e79-9f3b-386aed40ce31" />
+        <extendedCases>
+          <extend Id="644f7ad5-37b2-4638-9bc2-4cfc8bfc4306">
+            <useCaseMoniker Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" LastKnownName="List movies" />
+            <elementDefinition Id="ae4882d5-7c98-417b-a07c-235688d6603e" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" LastKnownName="Llist of movies" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2fbc2444-e249-411d-ab39-10d99aaa01d3" name="Order list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e21845a-cd52-4a82-9671-254dacd29455" />
+        <extendedCases>
+          <extend Id="8e818e8e-89e8-40c8-814a-8dcb2deaabdc">
+            <useCaseMoniker Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" LastKnownName="List movies" />
+            <elementDefinition Id="8f71f062-9f25-49ec-adef-4f71c1ed5c51" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" LastKnownName="Llist of movies" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aa42fe7e-7030-4c94-bda7-9477c06894c8" name="Search list" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fcb49e3a-300e-45a6-85f4-0e6f36ba3998" />
+        <extendedCases>
+          <extend Id="083b3698-26e6-4c22-b77c-62b114910182">
+            <useCaseMoniker Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" LastKnownName="List movies" />
+            <elementDefinition Id="09e161c8-550c-4d6f-9563-654ba83f58ad" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" LastKnownName="Llist of movies" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f46bbc2d-f224-4483-ba6e-efc7282582dd" name="Rate movie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5cc74aee-3c8f-4273-9408-4eae1e54a5d0" />
+        <extendedCases>
+          <extend Id="3b2411ca-676e-4104-b045-be10de7ce2b3">
+            <useCaseMoniker Id="384e8c8a-2cb2-4b7f-974a-33eca71c47a2" LastKnownName="Show movie detail" />
+            <elementDefinition Id="f1c9870b-261d-4aa8-8c3c-c2d164b2ecf1" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="d3d766ca-8de4-4c0f-b1c6-9af9c00a6c15" LastKnownName="Movie rating" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1ff29c0f-7242-4468-b60d-192260c5c12e" name="Show actor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d73e886d-68de-4489-9070-b25dcc9a2579" />
+        <extendedCases>
+          <extend Id="1100b285-a7cf-44a1-b4ad-20bf7d452a39">
+            <useCaseMoniker Id="384e8c8a-2cb2-4b7f-974a-33eca71c47a2" LastKnownName="Show movie detail" />
+            <elementDefinition Id="bdce9d8b-656e-46fe-ae98-0469a865d958" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9a51f333-4c24-4df3-9445-e438a50a227e" LastKnownName="Actor detail" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="384e8c8a-2cb2-4b7f-974a-33eca71c47a2" name="Show movie detail" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2706ea37-653b-4209-98b8-460dd5abfc75" />
+        <extendedCases>
+          <extend Id="bf4740bc-219b-40f5-b87b-1c455328e820">
+            <useCaseMoniker Id="aa0284bd-b7f2-42e5-a6ea-d89c304990fb" LastKnownName="List movies" />
+            <elementDefinition Id="568c18da-5548-4da4-9749-7fe2ee3b6b7c" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="5c7dff9e-54cb-411a-8f89-545a5c6a29f3" LastKnownName="Moview detail" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="ada1eda3-2563-4be3-9b55-e84f25e5d8b9" name="Llist of movies" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1bc06114-de98-4903-ae6c-74b9e7178ca8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="5c7dff9e-54cb-411a-8f89-545a5c6a29f3" name="Moview detail" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e616a93e-ab90-4692-aa27-ca2833771318" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="9a51f333-4c24-4df3-9445-e438a50a227e" name="Actor detail" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9d89529-b1b2-4dc3-9dc1-c830b3a3804a" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="b65522e2-e325-4d2e-a457-d40385488d8f" name="Edit movie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f73d9da0-3afa-44e9-a9bd-33f633d3e31e" />
+        <extendedCases>
+          <extend Id="82740751-1fd8-475a-a892-ff8d2a9f75a5">
+            <useCaseMoniker Id="384e8c8a-2cb2-4b7f-974a-33eca71c47a2" LastKnownName="Show movie detail" />
+            <elementDefinition Id="8fccd900-4e46-4be5-acbf-274181105bf8" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="5c7dff9e-54cb-411a-8f89-545a5c6a29f3" LastKnownName="Moview detail" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="d3d766ca-8de4-4c0f-b1c6-9af9c00a6c15" name="Movie rating" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d97ab3cb-2376-4287-860b-c4dd56b93cf8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bebac36a-b620-4f71-86c4-13f13ea81480" name="Edit actor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec710d20-5f0b-40bc-9d73-ebaa601f4167" />
+        <extendedCases>
+          <extend Id="8fd46c51-d072-4389-a5e5-1d841eb92ca6">
+            <useCaseMoniker Id="1ff29c0f-7242-4468-b60d-192260c5c12e" LastKnownName="Show actor" />
+            <elementDefinition Id="d0fbb573-8876-40ea-8ae7-0f9392915cb6" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="9a51f333-4c24-4df3-9445-e438a50a227e" LastKnownName="Actor detail" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ee6c558-0fa4-4fa7-82fc-a4ba65ae6aad" name="Manage genres" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a51e2e0a-e739-4918-bd96-900af2d66333" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e18a386d-7ac5-481d-a4fd-a3f8f3694e41" name="Manage Actors" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="538fb092-a6ff-4a61-9b51-7a5fad1a7997" />
+        <targetEnds>
+          <association Id="e638cc8d-8d29-4684-828c-5dc6638b51c9" isDerived="false" sourceEndRoleName="Manage Actors" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="1082a8a5-3d47-4db8-9041-94fc18696b1c" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df0be05a-8e6b-4eb7-b168-f36257dd0855" name="Manage Actors" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5f25b405-52fe-423d-ab39-5680432dfee4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="892c291f-3d2a-4fc1-9b44-3f2d825cdfba" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2529a941-32ae-4ca4-b108-c17064430002" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2cff3dca-8493-402e-a479-0c61f43dedaa" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="8acebb00-8633-4722-85d9-8a481502e10a" name="List ratings" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b1f519e-9b56-4b91-9601-7252a61aa865" />
+        <extendedCases>
+          <extend Id="f984834f-244e-4d4d-bdc5-e7b08dfe9399">
+            <useCaseMoniker Id="384e8c8a-2cb2-4b7f-974a-33eca71c47a2" LastKnownName="Show movie detail" />
+            <elementDefinition Id="ecbd8d67-0073-4fd0-901a-06b6a14603fc" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="d3d766ca-8de4-4c0f-b1c6-9af9c00a6c15" LastKnownName="Movie rating" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="85fdb31a-933e-4ac0-9e69-852eb744438d" name="ModelingProject">
+    <elementDefinition Id="a81f31be-45e9-4097-ba8f-33b09074c848" />
+  </package>
+</useCaseModelRoot>

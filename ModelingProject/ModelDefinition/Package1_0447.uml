@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="05c1f0a4-15b6-45a0-97b4-4d3cdb1e00aa"
+  name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="51b5b64c-e699-45a0-9efd-2c2a70c5dc81"
+        name="Movie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="cb62d475-eaad-4f23-87c3-6b434a62b0e8">
+            <interfaceMoniker
+              Id="8a53b952-f3b8-4b74-b56f-3d7e457d8db7"
+              LastKnownName="IMovie"
+              LastKnownLocation="Package_0531.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="72d77448-a0d1-4bfd-a51b-287a399704cf"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="cd677fe9-494d-42b3-9f28-a64aefc7fdd2">
+            <interfaceMoniker
+              Id="1569ee96-6cd8-4bca-b0b3-8733975f4268"
+              LastKnownName="IUser"
+              LastKnownLocation="Package_0531.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2ed8bd9e-967a-492c-a4af-06d864d59fc8"
+        name="Rating"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ad20af99-e761-4396-a778-f6d55cae43ca">
+            <interfaceMoniker
+              Id="98a8e07d-c0e2-465d-b58c-9890322869c0"
+              LastKnownName="IRating"
+              LastKnownLocation="Package_0531.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

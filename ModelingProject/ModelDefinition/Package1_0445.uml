@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="32b7cbb1-4fd5-45fe-8316-d50a175339d4"
+  name="Services" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f0015d20-5205-470f-98d3-c247ab1090e6"
+        LastKnownName="Repository"
+        LastKnownLocation="Package_0446.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="37eb25c5-9e88-42f4-9ea5-c6492f45d37f"
+        LastKnownName="ApiRepository"
+        LastKnownLocation="Package_0451.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="54eef2cc-d7f3-4944-9b49-c8565103ef87"
+        name="MovieRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="81535887-3917-4f20-b77f-b4f27768e062">
+            <classMoniker
+              Id="d89084d5-b039-4cf6-8675-a337da484a2b"
+              LastKnownName="MovieFilter"
+              LastKnownLocation="Package1_0445.uml" />
+          </dependency>
+          <dependency
+            Id="6c785195-2576-4fb6-b1d4-31a345c97464">
+            <classMoniker
+              Id="b7008639-f4e1-408d-b39a-6c3e5db353f5"
+              LastKnownName="DataContext"
+              LastKnownLocation="Package_0447.uml" />
+          </dependency>
+          <dependency
+            Id="b3fc94e6-1c3b-4887-8141-4f4f3fa1d32e">
+            <classMoniker
+              Id="51b5b64c-e699-45a0-9efd-2c2a70c5dc81"
+              LastKnownName="Movie"
+              LastKnownLocation="Package1_0447.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d26905a4-5d93-4075-b525-a405126369f3"
+            name="_dbContext"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3a1099db-18f5-44f2-b9de-31c0ec6ecbef"
+                LastKnownName="IDataContext"
+                LastKnownLocation="Package_0447.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="beb47800-4657-4e19-a5b4-5913c81997ee"
+            name="AddMovie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec2b7909-e5df-42fd-93eb-4651f6edc542"
+                  name="Movie"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="50ab5a75-a29f-43aa-ab99-a3f99836e4a4"
+            name="DeleteMovie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="866a1d55-2c28-429f-9f3b-04d2baef55be"
+                  name="Movie"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="136d34d6-6094-4e9b-87c0-2fe23e526fe4"
+            name="UpdateMovie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2bffc12-7fc6-4a73-8694-5dc2df589401"
+                  name="Movie"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6a40c8e9-21bd-4af0-9811-99a58eb43843"
+            name="GetAllMovies"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="99e57850-29ca-4292-8897-8739142201af"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3857c64c-6235-45f4-8c3f-391abce233e3"
+                      LastKnownName="ICollection&lt;Movie&gt;"
+                      LastKnownLocation="Package1_0445.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e93e4051-5e8a-448d-81d2-59918cf099ab"
+            name="GetMoviesByFilter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b379428e-f923-4f3a-89aa-b14a7ef55028"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3857c64c-6235-45f4-8c3f-391abce233e3"
+                      LastKnownName="ICollection&lt;Movie&gt;"
+                      LastKnownLocation="Package1_0445.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c88c501-967e-462e-b64a-07a864e76647"
+                  name="MovieFilter"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7d9b1301-6400-4867-9048-a542408813ef"
+        name="WebApiClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3857c64c-6235-45f4-8c3f-391abce233e3"
+        name="ICollection&lt;Movie&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d89084d5-b039-4cf6-8675-a337da484a2b"
+        name="MovieFilter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3e8ea400-8d6d-4e90-90f0-9691feb1c763"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1971f2e6-a601-4ac6-84d9-2bd5f1c8a780"
+        name="MovieApiClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="febe47bd-b6bc-4de6-8d63-638a991d2085"
+        name="UserApiClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

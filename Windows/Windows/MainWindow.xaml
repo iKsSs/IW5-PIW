@@ -1,0 +1,75 @@
+﻿<Window x:Class="Windows.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userControls="clr-namespace:Windows.UserControls"
+        xmlns:converter="clr-namespace:Windows.Converter"
+        mc:Ignorable="d"
+        Title="IW5 Projekt - 2015/2016" Height="560" Width="740"
+        MinWidth="740" MinHeight="560">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="250px"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40px" />
+            </Grid.RowDefinitions>
+
+            <ListView x:Name="listBox" Grid.Row="1" ItemsSource="{Binding Movies}" 
+                      SelectedItem="{Binding SelectedMovie}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Width="230px" CanHorizontallyScroll="False">
+                            <WrapPanel MaxHeight="100px" Orientation="Horizontal">
+                                <Image Source="{Binding PosterImage}" Width="100px" Height="auto"/>
+                                <StackPanel CanHorizontallyScroll="False" CanVerticallyScroll="False" MaxWidth="130px">
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" TextWrapping="Wrap"/>
+                                    <TextBlock Text="{Binding Plot}" TextWrapping="Wrap" TextTrimming="WordEllipsis"/>
+                                </StackPanel>
+                            </WrapPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid Grid.Row="0" Margin="5">
+                <StackPanel>
+                    <UniformGrid Columns="2">
+                        <TextBlock TextWrapping="Wrap" Text="Name:"/>
+                        <TextBox x:Name="NameBox" Text="{Binding MovieFilter.Name, Mode=TwoWay}" 
+                                 TextWrapping="Wrap" />
+                    </UniformGrid>
+                    <GridSplitter Height="10"/>
+                    <UniformGrid Columns="2">
+                        <TextBlock TextWrapping="Wrap" Text="Year:"/>
+                        <TextBox x:Name="YearBox" Text="{Binding MovieFilter.Year, Mode=TwoWay}" 
+                                 TextWrapping="Wrap" />
+                    </UniformGrid>
+                    <GridSplitter Height="10"/>
+                    <Button x:Name="MovieFilterCommand" Command="{Binding Path=MovieFilterCommand}" 
+                            CommandParameter="{Binding MovieFilter}" Content="MovieFilter"/>
+                </StackPanel>
+            </Grid>
+            <Button Grid.Row="2" x:Name="AddNewMovieButton" Command="{Binding NewMovieCommand}">Add new movie</Button>
+        </Grid>
+
+        <GridSplitter HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="1" ResizeBehavior="PreviousAndNext" Width="5"/>
+
+        <userControls:AddDirectorUserControl Grid.Column="2" Visibility="{Binding NewDirector, 
+            Converter={converter:NullToVisibilityConverter}}" Grid.ZIndex="2"/>
+        <userControls:AddActorUserControl Grid.Column="2" Visibility="{Binding NewActor, 
+            Converter={converter:NullToVisibilityConverter}}" Grid.ZIndex="2"/>
+        <userControls:AddMovieUserControl Grid.Column="2" Visibility="{Binding NewMovie, 
+            Converter={converter:NullToVisibilityConverter}}" Grid.ZIndex="1"/>
+        <userControls:MovieDetailUserControl Grid.Column="2" Visibility="{Binding SelectedMovie, 
+            Converter={converter:NullToVisibilityConverter}}" Grid.ZIndex="0"/>
+
+    </Grid>
+</Window>
